@@ -1,0 +1,152 @@
+<html>
+
+
+
+
+<head>
+
+<meta http-equiv="Content-Type"
+
+content="text/html; charset=iso-8859-1">
+
+<META NAME="Keywords" CONTENT="Dwyers,Dwyer's,Restaurant,Martin,Sile,Dwyer,Good,Irish,Food,Seafood,Fish,Vegetarian,Cuisine,Ballyhack,Cookery,Centre,Waterford,Crystal,Glass,Historic,City,Southeast,South,East,Ireland,Activities,Beach,Bay,Coast,Coastline,Sea,Break,Holiday,Summer,Holiday,Groups,Seaside,Irish,Sightseeing,Walking,Vacation,Holidays">
+
+<title></title>
+
+</head>
+
+
+
+<body bgcolor="#99CC99">
+
+<script language=JavaScript>
+	var pageshown = 'a';
+	button_a1 = new Image;
+	button_a2 = new Image;
+	button_b1 = new Image;
+	button_b2 = new Image;
+	button_c1 = new Image;
+	button_c2 = new Image;
+	button_d1 = new Image;
+	button_d2 = new Image;
+   button_a1.src = "welcomebutton.gif";
+   button_a2.src = "welcomebutton2.gif";
+   button_b1.src = "mdbutton.gif";
+   button_b2.src = "mdbutton2.gif";
+   button_c1.src = "menubutton.gif";
+   button_c2.src = "menubutton2.gif";
+   button_d1.src = "locationbutton.gif";
+   button_d2.src = "locationbutton2.gif";
+
+function mouse_over(button)
+{
+	if (button=='a'){
+		button_a.src=button_a2.src;
+	}
+	if (button=='b'){
+		button_b.src=button_b2.src;
+	}
+	if (button=='c'){
+		button_c.src=button_c2.src;
+	}
+	if (button=='d'){
+		button_d.src=button_d2.src;
+	}
+}
+
+function mouse_out(button)
+{
+	if (button != pageshown){
+		if (button=='a'){
+			button_a.src=button_a1.src;
+		}
+		if (button=='b'){
+			button_b.src=button_b1.src;
+		}
+		if (button=='c'){
+			button_c.src=button_c1.src;
+		}
+		if (button=='d'){
+			button_d.src=button_d1.src;
+		}
+	}
+}
+
+function nowshowing(button)
+{
+	pageshown = button;
+	if (button=='a'){
+		button_a.src=button_a2.src;
+		button_b.src=button_b1.src;
+		button_c.src=button_c1.src;
+		button_d.src=button_d1.src;
+	}
+	if (button=='b'){
+		button_a.src=button_a1.src;
+		button_b.src=button_b2.src;
+		button_c.src=button_c1.src;
+		button_d.src=button_d1.src;
+	}
+	if (button=='c'){
+		button_a.src=button_a1.src;
+		button_b.src=button_b1.src;
+		button_c.src=button_c2.src;
+		button_d.src=button_d1.src;
+	}
+	if (button=='d'){
+		button_a.src=button_a1.src;
+		button_b.src=button_b1.src;
+		button_c.src=button_c1.src;
+		button_d.src=button_d2.src;
+	}
+}
+</script>
+
+<img src="Dwyesign.jpg" width="132" height="145">
+
+<p align="right">&nbsp;</p>
+
+<p align="right">
+<a href="welcome.html" target=main
+onMouseOver="mouse_over('a')" 
+onClick="nowshowing('a')"
+onmouseout="mouse_out('a')"> 
+<img border=0 src="welcomebutton.gif" alt="Welcome" width="156" height="31" name="button_a">
+</a>
+</p>
+<p align="right"><br></p>
+<p align="right">
+<a href="md.html" target=main
+onmouseover="mouse_over('b')" 
+onmouseout="mouse_out('b')"
+onClick="nowshowing('b')">
+<img border=0 src="mdbutton.gif" alt="Martin Dwyer" width="156" height="31" name="button_b">
+</a>
+</p>
+<p><br></p>
+<a href="menu.html" target=main
+onmouseover="mouse_over('c')"
+onmouseout="mouse_out('c')"
+onclick="nowshowing('c');">
+<p align="right">
+<img border=0 src="menubutton.gif" alt="Menu" width="156" height="31" name="button_c">
+</a>
+</p>
+<p><br></p>
+<p align="right">
+<a href="location.html" target=main
+onmouseover="mouse_over('d')" 
+onmouseout="mouse_out('d')"
+onclick="nowshowing('d')">
+<img border=0 src="locationbutton.gif" alt="Location" width="156" height="31" name="button_d"> </p>
+</a>
+<p><br></p>
+
+<script>
+nowshowing(pageshown);
+</script>
+
+</body>
+
+</html>
+
